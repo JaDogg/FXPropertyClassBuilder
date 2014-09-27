@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.simpll.fxprop.FXMLController">
+    <children>
+      <TitledPane animated="false" collapsible="false" layoutX="25.0" layoutY="26.0" prefHeight="171.0" prefWidth="297.0" text="Property">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="295.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Property Name" />
+                  <TextField fx:id="txtProperty" layoutX="110.0" layoutY="10.0" promptText="Property Name" />
+                  <Label layoutX="14.0" layoutY="57.0" text="Property Type" />
+                  <ComboBox fx:id="cmbPropertyType" layoutX="110.0" layoutY="53.0" prefWidth="150.0" promptText="Property Type" />
+                  <Button layoutX="110.0" layoutY="101.0" mnemonicParsing="false" onAction="#addOnAction" text="Add" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="334.0" layoutY="27.0" prefHeight="171.0" prefWidth="332.0" text="Field Information">
+         <content>
+            <AnchorPane>
+               <children>
+                  <AnchorPane prefHeight="179.0" prefWidth="306.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="tvProperties" prefHeight="126.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="tcName" prefWidth="116.0" text="Name" />
+                            <TableColumn fx:id="tcType" prefWidth="114.0" text="Type" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="272.0" layoutY="2.0" mnemonicParsing="false" onAction="#btnRemoveOnAction" text="-" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TextArea fx:id="txtCode" layoutX="25.0" layoutY="236.0" prefHeight="280.0" prefWidth="641.0" />
+      <Button layoutX="226.0" layoutY="205.0" mnemonicParsing="false" onAction="#generateOnAction" text="Generate Code" />
+      <Button layoutX="620.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
+      <Label layoutX="25.0" layoutY="209.0" text="Class Name" />
+      <TextField fx:id="txtClassName" layoutX="94.0" layoutY="205.0" prefHeight="25.0" prefWidth="124.0" promptText="Class Name" />
+    </children>
+</AnchorPane>
